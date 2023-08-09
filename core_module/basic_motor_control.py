@@ -4,24 +4,16 @@ class MotorControl:
         self.motor_pins = motor_pins
 
     def setup_motors(self):
-        for pin in self.motor_pins:
-            # setup motor pin here
-            pass
+        pass
 
     def move_forward(self, speed):
-        for pin in self.motor_pins:
-            # code to move motor forward
-            pass
+        pass
 
     def move_backward(self, speed):
-        for pin in self.motor_pins:
-            # code to move motor backward
-            pass
+        pass
 
     def stop_motors(self):
-        for pin in self.motor_pins:
-            # code to stop motors
-            pass
+        pass
 
     def turn_left(self, speed):
         # code to turn left

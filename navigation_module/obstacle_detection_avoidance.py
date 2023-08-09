@@ -29,15 +29,11 @@ class ObstacleDetection:
     def calculate_distance(self):
         self.send_signal()
         time_elapsed = self.read_echo()
-        distance = (time_elapsed * 34300) / 2
-        return distance
+        return (time_elapsed * 34300) / 2
 
     def detect_obstacle(self):
         distance = self.calculate_distance()
-        if distance < 30:  # obstacle within 30cm
-            return True
-        else:
-            return False
+        return distance < 30
 
     def avoid_obstacle(self):
         if self.detect_obstacle():

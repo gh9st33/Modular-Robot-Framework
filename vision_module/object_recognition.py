@@ -22,9 +22,9 @@ class ObjectRecognition:
         # Use OpenCV's built-in Haar cascades to detect objects
         # This is a placeholder, replace with your own classifier if needed
         cascade = cv2.CascadeClassifier('haarcascade_frontalface_default.xml')
-        objects = cascade.detectMultiScale(gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30))
-
-        return objects
+        return cascade.detectMultiScale(
+            gray, scaleFactor=1.1, minNeighbors=5, minSize=(30, 30)
+        )
 
     def draw_boxes(self, image, objects):
         # Draw a rectangle around each object
@@ -36,6 +36,5 @@ class ObjectRecognition:
     def recognize(self):
         image = self.capture_image()
         objects = self.detect_objects(image)
-        result = self.draw_boxes(image, objects)
-        return result
+        return self.draw_boxes(image, objects)
 ```

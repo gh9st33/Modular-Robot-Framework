@@ -19,7 +19,7 @@ class WirelessCommunication:
 
         received_message = []
         self.radio.read(received_message, self.radio.getDynamicPayloadSize())
-        print("Received: {}".format(received_message))
+        print(f"Received: {received_message}")
 
     def close(self):
         self.radio.stopListening()
