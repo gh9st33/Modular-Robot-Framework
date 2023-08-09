@@ -10,8 +10,7 @@ class MLModels:
 
     def predict(self, image):
         processed_image = self.preprocess_image(image)
-        prediction = self.model.predict(processed_image)
-        return prediction
+        return self.model.predict(processed_image)
 
     def preprocess_image(self, image):
         # Image preprocessing steps can be added here
@@ -19,6 +18,5 @@ class MLModels:
 
     def capture_and_predict(self):
         image = self.sensor_data.capture_image()
-        prediction = self.predict(image)
-        return prediction
+        return self.predict(image)
 ```
